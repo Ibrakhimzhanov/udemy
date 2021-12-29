@@ -42,6 +42,7 @@ function rerenderTotalPrice() {
   // TODO: опишите функционал подсчета общей стоимости заказа
   const totalPrice = order.reduce((acc, item) => {
     return acc + item.price;
+    //TODO
   }, 0);
   // Не меняйте эту строчку
   document.getElementById("total").innerText = totalPrice;
@@ -52,6 +53,7 @@ function renderCart() {
   const cart = document.getElementById("basket-items");
 
   cart.innerHTML = "";
+
   order.forEach((item) => {
     const el = document.createElement("li");
     el.innerText = item.title;
